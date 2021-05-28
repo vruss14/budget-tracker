@@ -58,7 +58,7 @@ function readIndexedDB() {
             .then((response) => {
                 // Checks to see if storage is empty; if not, a new transaction is created
                 if (response.length !== 0) {
-                    transaction = db.transaction(['BudgetStorage', 'readwrite']);
+                    transaction = db.transaction(['BudgetStorage'], 'readwrite');
 
                     const currentStorage = transaction.objectStore('BudgetStorage');
 
