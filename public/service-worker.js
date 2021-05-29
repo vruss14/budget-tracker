@@ -1,3 +1,5 @@
+// Caches all important files on the front-end; relative paths appear this way because the service worker is in the public folder
+
 const FILES_TO_CACHE = [
     "/",
     "/index.html",
@@ -9,6 +11,7 @@ const FILES_TO_CACHE = [
     "./icons/icon-512x512.png"
   ];
   
+  // Static cache is responsible for front-end files/images; data cache is responsible for user inputs
   const CACHE_NAME = "static-cache-v2";
   const DATA_CACHE_NAME = "data-cache-v1";
   
